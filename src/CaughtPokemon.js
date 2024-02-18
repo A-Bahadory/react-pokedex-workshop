@@ -1,16 +1,16 @@
 import { useState } from "react";
 
 export default function CaughtPokemon() {
-  const [caught, state] = useState(0);
-  const emptyArray = [1, 2];
+  const [caught, state] = useState([]);
+
   const CaughtStatus = () => {
-    state((caught = emptyArray));
+    state(caught.length);
   };
   const date = new Date().toLocaleDateString();
   return (
     <div>
       <p>
-        Caught {caught.length} Pokemon on / {date}{" "}
+        Caught {caught} Pokemon on / {date}{" "}
       </p>
       <button onClick={CaughtStatus}>click</button>
     </div>
